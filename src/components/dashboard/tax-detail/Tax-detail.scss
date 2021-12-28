@@ -1,0 +1,77 @@
+@import "../../../theme/theme.scss";
+
+.tax-detail-page {
+  width: 100%;
+  min-height: 85%;
+  border-radius: 1.2rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: $third-white;
+
+  .tax-container {
+    flex-direction: column;
+
+    .tax {
+      margin: 0;
+      font-weight: 600;
+      color: $first-black;
+
+      .currency {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .tax-amount {
+        font-size: 2.5rem;
+      }
+    }
+
+    .tax-text {
+      margin: 0;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $accent-color;
+    }
+  }
+
+  .tax-detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card-center-aliner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .tax-card {
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
+
+        margin-bottom: 4rem;
+
+        .tax-amount-container {
+          font-weight: 600;
+
+          .currency {
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+          }
+          .amount {
+            font-size: 1.5rem;
+          }
+        }
+
+        .tax-description {
+          margin: 0;
+          margin-top: 0.3rem;
+          font-size: 0.8rem;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import "../../theme/theme.scss";
+@import "../login//Login-container.scss";
+
+.dashboard-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: $second-black;
+
+  .application {
+    width: 95vw;
+    height: 90vh;
+    border-radius: 1.3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: $first-white;
+  }
+
+  .application-header {
+    padding: 0 0.2rem;
+
+    .application-title-container {
+      .application-title {
+        margin: 0;
+        color: $accent-color;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .application-sub-title {
+        margin: 0;
+        color: $first-black;
+        font-size: 1rem;
+        margin-left: 0.1rem;
+      }
+    }
+
+    .user-section {
+      .logged-user {
+        font-size: 1rem;
+        margin-right: 1rem;
+        font-weight: 600;
+
+        .greet {
+          color: $second-black;
+          margin-right: 5px;
+        }
+
+        .user {
+          color: $first-black;
+        }
+      }
+
+      .logout {
+        border: none;
+        outline: none;
+        background: #dddddf;
+        min-height: 2rem;
+        min-width: 5rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $accent-color;
+          color: $first-black;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .tax-card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tax-card {
+      width: 15rem;
+      height: 10rem;
+      border-radius: 0.5rem;
+      background-color: $accent-color;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin: 0 1rem 1rem 0;
+
+      .card-body {
+        margin-top: 0.8rem;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+
+        .tax-container {
+          color: $first-black;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+
+          .currency {
+            font-size: 0.8rem;
+            margin-top: 0.15rem;
+            margin-right: 0.1rem;
+          }
+          .tax-amount {
+            font-size: 1.3rem;
+            font-weight: 600;
+          }
+        }
+
+        .tax-year-container {
+          margin: 0;
+          margin-top: 0.4rem;
+          font-size: 0.7rem;
+          color: $first-white;
+          .tax-year {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+    }
+
+    .add-card {
+      width: 15rem;
+      height: 10rem;
+      border-radius: 0.5rem;
+      background-color: $second-white;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin: 0 1rem 1rem 0;
+
+      .add-icon {
+        font-size: 3rem;
+      }
+
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  }
+}

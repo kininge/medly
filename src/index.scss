@@ -1,0 +1,220 @@
+@import "./theme//theme.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.back-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $first-black;
+
+  .back-icon {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+.margin-bottom-3 {
+  margin-bottom: 3rem;
+}
+.margin-bottom-4 {
+  margin-bottom: 4rem;
+}
+
+.child-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child-center-baseline {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.child-separate-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.child-center-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.accent-active {
+  color: $accent-color !important;
+}
+.accent-hover {
+  color: $first-black;
+}
+
+.enactive-button {
+  cursor: no-drop;
+}
+
+.input-container {
+  &:focus-within {
+    label {
+      color: $first-black !important;
+    }
+  }
+
+  label {
+    color: $second-black;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0 0 0.2rem 0.2rem;
+  }
+
+  .input-box {
+    position: relative;
+    @extend .child-center-center;
+
+    input {
+      height: 2.4rem;
+      width: 100%;
+      padding: 0.2rem 1rem;
+      outline: none;
+      border: 2px solid $second-black;
+
+      font-size: 0.8rem;
+      border-radius: 0.4rem;
+      box-sizing: border-box;
+
+      &:focus {
+        border: 2px solid $first-black;
+      }
+    }
+
+    .date-input {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      border: none;
+      outline: none;
+      padding: 0;
+      opacity: 0;
+    }
+
+    .dummy-input {
+      height: 2.4rem;
+      width: 100%;
+      padding: 0.2rem 1rem;
+      outline: none;
+      border: 2px solid $second-black;
+
+      font-size: 0.8rem;
+      border-radius: 0.4rem;
+      box-sizing: border-box;
+      cursor: no-drop;
+      display: flex;
+      align-items: center;
+    }
+
+    .action-container {
+      @extend .child-center-center;
+
+      height: 2.4rem;
+      width: 2.8rem;
+      position: relative;
+      border-radius: 0.4rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      box-sizing: border-box;
+      background-color: $second-white;
+
+      .action-icon {
+        font-size: 0.8rem;
+      }
+    }
+
+    .action-container-active {
+      @extend .action-container;
+      background-color: $accent-color;
+
+      .action-icon {
+        @extend .action-icon;
+      }
+    }
+  }
+
+  .user-message {
+    font-size: 0.8rem;
+    color: $danger-color;
+    margin: 0.2rem 0 0 0.2rem;
+  }
+}
+
+.success-message {
+  background-color: $accent-color;
+
+  .message {
+    color: $first-white;
+  }
+}
+.error-message {
+  background-color: $danger-color;
+
+  .message {
+    color: $first-white;
+  }
+}
+.information-message {
+  background-color: $info-color;
+}
+
+.form {
+  .submit-button {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 2.4rem;
+    border-radius: 0.4rem;
+  }
+
+  .submit-button-disable {
+    @extend .submit-button;
+
+    cursor: no-drop;
+    background-color: $second-white;
+    color: $second-black;
+  }
+
+  .submit-button-active {
+    @extend .submit-button;
+
+    cursor: pointer;
+    background-color: $accent-color;
+    color: $first-black;
+    font-weight: 800;
+  }
+}

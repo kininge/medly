@@ -1,0 +1,26 @@
+.message-box {
+  position: absolute;
+  z-index: 2;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-height: 2.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+
+  animation: rise-from-bottom 300ms ease-in;
+
+  .message {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes rise-from-bottom {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 2.5rem;
+  }
+}

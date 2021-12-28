@@ -1,0 +1,54 @@
+@import "../../theme/theme.scss";
+@import "../../index.scss";
+
+.login-container-page {
+  background-color: $second-white;
+  height: 100vh;
+  width: 100vw;
+
+  .login-container-section {
+    min-width: 28rem;
+    background-color: $first-white;
+    border-radius: 1.2rem;
+    padding: 1rem;
+
+    .application-title-container {
+      .application-title {
+        margin: 0;
+        color: $accent-color;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .application-sub-title {
+        margin: 0;
+        color: $first-black;
+        font-size: 1rem;
+        margin-left: 0.1rem;
+      }
+    }
+
+    .tab-container {
+      .tab {
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        color: $second-black;
+        min-width: 5rem;
+        min-height: 2.5rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          @extend .accent-hover;
+        }
+      }
+    }
+  }
+}
